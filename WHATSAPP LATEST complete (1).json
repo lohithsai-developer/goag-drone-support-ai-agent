@@ -1,0 +1,1969 @@
+{
+  "name": "WHATSAPP LATEST complete",
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "3f1e5d08-09bd-49c6-aaec-d8d72445a2c2"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6d1eb8b7-fdf0-4b7d-b160-cbc849bed202",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -1136,
+        2064
+      ],
+      "id": "683eea66-74b6-45d1-8854-0a895bbdbbc2",
+      "name": "language selection"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "GOAG Drone Support 🚁\n\n1️⃣ Drone Issues\n2️⃣ General Queries\n3️⃣ Contact Support",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -896,
+        1808
+      ],
+      "id": "e9c2f154-92b8-4aeb-9b00-8fc7ba3034cd",
+      "name": "English Support Menu",
+      "webhookId": "0d6354bb-aa64-4c19-8a0c-fe6cd91b171f"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "GOAG డ్రోన్ సపోర్ట్ 🚁\n\n1️⃣ డ్రోన్ సమస్యలు\n2️⃣ సాధారణ ప్రశ్నలు\n3️⃣ సపోర్ట్ టీమ్",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -896,
+        2112
+      ],
+      "id": "a5a7c263-dadd-4f4a-98bb-a5c7ead39183",
+      "name": "Telugu Support Menu",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -896,
+        2304
+      ],
+      "id": "e4900273-bc37-4162-8f22-cbcdaef72993",
+      "name": "Invalid Language Selection",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "c632b533-671f-4d3d-8755-c29773535e67"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "d3fc2ade-b397-4fe5-9e57-362353726e4d",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a7cc98e2-a759-456c-883e-9fa8d6cb9d0e",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -672,
+        1776
+      ],
+      "id": "332f7831-1496-4cc1-a5d2-12e59eee0461",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -448,
+        864
+      ],
+      "id": "12e5196f-d0fe-4818-9e1f-d90612bae78f",
+      "name": "Invalid Language Selection1",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Drone Issues Support 🚁\n\n1 Motor Problem\n2 Battery Issue\n3 GPS Issue\n4 Sprayer Problem\n5 Remote Controller",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -448,
+        544
+      ],
+      "id": "9575ddb6-9fd1-4541-b5a5-49ea7ddd86ae",
+      "name": "Drone Issues",
+      "webhookId": "c73a0ad8-f552-46dc-84f8-b0f95ec1ab56"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "General Queries\n\n• Product Information\n• Pricing\n• Warranty\n• Dealer Locations",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -448,
+        1648
+      ],
+      "id": "4c249e92-4373-48c6-a228-4615c1b7e696",
+      "name": "General Queries",
+      "webhookId": "5e181267-aafe-4f12-9a42-39fe3fb5a2e0"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "673a3247-78fe-4d02-83ba-997efd357c67"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "81d1d628-8c3b-4013-a0c3-45a46151ae80",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "60bd89f5-5054-4449-8944-ba64b30a74aa",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2c33f41d-26a3-4da2-a155-4b611177c80e",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "4",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b66c8735-37ed-48b1-be7e-9f9d74141d41",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "5",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -224,
+        480
+      ],
+      "id": "2e0f2223-3a86-4776-a67c-eb70f14c0ec6",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🔧 Motor Problem Support\n\nTry the following steps:\n\n1️⃣ Check if propellers are damaged  \n2️⃣ Ensure motor wires are properly connected  \n3️⃣ Clean dust from motor  \n4️⃣ Restart the drone\n\n📄 Detailed Guide:\nhttps://drive.google.com/motor-guide\n\nreply with any letter or word to proceed...\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7068d517-b4e6-4cb6-b2ad-9ff7154a6dda",
+      "name": "Motor Problem",
+      "webhookId": "9130ae0c-ca5c-49ca-af64-3e2e4277eacd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🔋 Battery Issue Support\n\nPlease check:\n\n1️⃣ Battery fully charged  \n2️⃣ Battery properly inserted  \n3️⃣ No swelling in battery  \n4️⃣ Try another battery if available\n\n📄 Battery Troubleshooting Guide:\nhttps://drive.google.com/battery-guide\n\nreply with any letter or word to proceed...",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        192
+      ],
+      "id": "74768ebe-b685-4333-b446-c8201c588e94",
+      "name": "Battery Issue",
+      "webhookId": "9130ae0c-ca5c-49ca-af64-3e2e4277eacd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "📡 GPS Issue Support\n\nTry these steps:\n\n1️⃣ Move drone to open sky  \n2️⃣ Wait 2-3 minutes for satellite lock  \n3️⃣ Restart the drone  \n4️⃣ Calibrate compass\n\n📄 GPS Setup Guide:\nhttps://drive.google.com/gps-guide\n\nreply with any letter or word to proceed...",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        384
+      ],
+      "id": "d35012a2-ee16-4d91-8dcc-6f42e4606f45",
+      "name": "GPS Issue",
+      "webhookId": "9130ae0c-ca5c-49ca-af64-3e2e4277eacd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "💧 Sprayer Issue Support\n\nPlease check:\n\n1️⃣ Nozzle blockage  \n2️⃣ Pump connection  \n3️⃣ Tank liquid level  \n4️⃣ Clean filter\n\n📄 Sprayer Maintenance Guide:\nhttps://drive.google.com/sprayer-guide\n\nreply with any letter or word to proceed...",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        576
+      ],
+      "id": "c9aef164-940f-4ab0-9444-dbe6aed332d2",
+      "name": "Sprayer Problem",
+      "webhookId": "9130ae0c-ca5c-49ca-af64-3e2e4277eacd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🎮 Remote Controller Support\n\nSteps to try:\n\n1️⃣ Check controller battery  \n2️⃣ Reconnect controller with drone  \n3️⃣ Restart controller  \n4️⃣ Check signal interference\n\n📄 Controller Setup Guide:\nhttps://drive.google.com/controller-guide\n🎮 Remote Controller Support\n\nSteps to try:\n\n1️⃣ Check controller battery  \n2️⃣ Reconnect controller with drone  \n3️⃣ Restart controller  \n4️⃣ Check signal interference\n\n📄 Controller Setup Guide:\nhttps://drive.google.com/controller-guide\n\nreply with any letter or word to proceed...\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        768
+      ],
+      "id": "7803bf89-95ab-411a-9c5f-51acf2914385",
+      "name": "Remote Controller",
+      "webhookId": "9130ae0c-ca5c-49ca-af64-3e2e4277eacd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        960
+      ],
+      "id": "1ac1c626-8cd7-4def-93c0-67a910c6b749",
+      "name": "Invalid Language Selection2",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Was your issue resolved?\n\n1 Yes\n2 No – Schedule a call with technician\n3 Return to Main Menu",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        320,
+        112
+      ],
+      "id": "8a13c021-2803-447e-964a-7912c0c63287",
+      "name": " issue resolved",
+      "webhookId": "ec3f49be-a8a1-487e-b8e4-4608b6aa9ea3"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "5af71bcf-4443-422d-ba8b-9eae839169ca"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "73ad8f03-ac42-4818-a332-a54b85c862c9",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b5395e62-1c14-41f0-9c28-771eb6c9949b",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        400,
+        1088
+      ],
+      "id": "d9a7cd03-6c11-4fea-a21c-72efc6940274",
+      "name": "Switch2"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        672,
+        1584
+      ],
+      "id": "171b5498-5138-431b-bce8-7a00d9e7877e",
+      "name": "Invalid Language Selection3",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Glad your issue was resolved 😊\n\nIf you need more help, you can always return to the main menu.\n\n1 Main Menu",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        3088,
+        1008
+      ],
+      "id": "1015ce21-5660-48e2-862e-0a7a8aca29b2",
+      "name": "ISSUE RESOLVED",
+      "webhookId": "24431415-a6af-491c-9e4b-050a80abe062"
+    },
+    {
+      "parameters": {
+        "message": "We will arrange a technician call to help you.\n\nPlease provide some details.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        1952,
+        1712
+      ],
+      "id": "69c540f7-9609-43b0-99d3-a4e73d487a6c",
+      "name": "NOT RESOLVED CALL",
+      "webhookId": "24431415-a6af-491c-9e4b-050a80abe062"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Please enter your name.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        2128,
+        1712
+      ],
+      "id": "c78416e1-3a07-49db-8541-29e53d8ff717",
+      "name": "name",
+      "webhookId": "3254fc2d-13b8-4a6d-8749-19a097a4b967"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Please enter your phone number.\n\nExample:\n9876543210",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        2320,
+        1712
+      ],
+      "id": "7c3d282d-9510-4957-92d6-8c98af82dd49",
+      "name": "mobile",
+      "webhookId": "3254fc2d-13b8-4a6d-8749-19a097a4b967"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Please enter your village or city name.\n\nExample:\nWarangal",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        2592,
+        1712
+      ],
+      "id": "b98e7f02-b8dc-4a10-a03d-4f0c66285edc",
+      "name": "city",
+      "webhookId": "3254fc2d-13b8-4a6d-8749-19a097a4b967"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Please enter your drone model.\n\nExample:\nAGRONE 10X\nAGRONE 8X",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        2864,
+        1712
+      ],
+      "id": "7840fb96-47cd-4e34-81cf-3f6d2aff62d7",
+      "name": "model",
+      "webhookId": "3254fc2d-13b8-4a6d-8749-19a097a4b967"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "18Z6h_CUIHf5UpoRM2xlqTEMj5DTHNnq24E7qA7ZPJXg",
+          "mode": "list",
+          "cachedResultName": "goag services sample",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18Z6h_CUIHf5UpoRM2xlqTEMj5DTHNnq24E7qA7ZPJXg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18Z6h_CUIHf5UpoRM2xlqTEMj5DTHNnq24E7qA7ZPJXg/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $now.toFormat('dd-MM-yyyy') }}",
+            "Time": "={{ $now.toFormat('hh:mm a') }}",
+            "Name": "={{ $node[\"name\"].json[\"chatInput\"] }}",
+            "Phone": "={{ $node[\"mobile\"].json.chatInput }}",
+            "Village": "={{ $node[\"city\"].json.chatInput }}",
+            "Drone Model": "={{ $json.chatInput }}",
+            "Issue": "={{ $node[\"model\"].json.chatInput }}",
+            "Status": "pending"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time",
+              "displayName": "Time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Village",
+              "displayName": "Village",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Drone Model",
+              "displayName": "Drone Model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Issue",
+              "displayName": "Issue",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3136,
+        1712
+      ],
+      "id": "6ba3aff4-ecb2-4c51-9dad-c6fa45a3fc1e",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Z0TKAH4CSTYcoibn",
+          "name": "Google Sheets account 478"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "message": "✅ Your request has been registered.\n\nOur technician will contact you soon.\n\nThank you for contacting GOAG Drone Support 🚁",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        3376,
+        1712
+      ],
+      "id": "5253ef05-4153-4c28-a74a-83aba40b25cb",
+      "name": "Chat1",
+      "webhookId": "c30aaddd-c4f6-4262-bc30-e5c4dd69ddac"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "dfc6f4ab-8838-49f8-a83b-72103f8de7bb"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "f8531c31-51a8-4964-8012-0294cd97f129",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "87390e4f-9afe-41ff-a0e3-21916ae05991",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5de7825b-ba32-4f0e-971d-2c768610ee73",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "4",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "8d32ad78-de26-4be4-9fbe-ca22d367e2df",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "5",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -224,
+        1584
+      ],
+      "id": "c5908345-5749-4fd0-9bf0-cbfc8c0a2955",
+      "name": "Switch3"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1968
+      ],
+      "id": "49bc6595-9c63-4866-b21f-ad787e0b619a",
+      "name": "Invalid Language Selection4",
+      "webhookId": "294f6cca-1d81-44ae-af96-efdf18b7d1dd"
+    },
+    {
+      "parameters": {
+        "message": "Thank you for contacting GOAG Drone Support 🚁",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        672,
+        2064
+      ],
+      "id": "c0440a01-0fe1-4b0b-97be-271634402f4d",
+      "name": "Chat7",
+      "webhookId": "6265e7c9-e1a8-4ef0-b18b-c88433fdf07c"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "💰 Service Charges\n\nBasic inspection: ₹500\nMotor replacement: ₹2500\nBattery replacement: ₹6000\n\nFor exact quote please contact support.\n\n📞 Support: +91 XXXXX XXXXX\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1152
+      ],
+      "id": "3698e263-a44d-490f-9cb7-1090d5677b50",
+      "name": "Price Node",
+      "webhookId": "78104b72-3434-4b31-a532-d47cb29c9851"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🔧 Available Spare Parts\n\n• Motors\n• Propellers\n• Batteries\n• Sprayer pumps\n• Remote controllers\n\nContact support to order spare parts.\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1344
+      ],
+      "id": "12462c8f-30c5-4010-ad98-0ce8dd8b9d29",
+      "name": "Spare Parts Node",
+      "webhookId": "78104b72-3434-4b31-a532-d47cb29c9851"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🎓 Drone Training Program\n\nWe provide training for:\n\n• Drone flying\n• Agriculture spraying\n• Basic maintenance\n\nContact GOAG support to register.\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1536
+      ],
+      "id": "35ac310d-8c31-4d62-8a84-569218b0ee82",
+      "name": "Training Node",
+      "webhookId": "78104b72-3434-4b31-a532-d47cb29c9851"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "🛡 Warranty Details\n\nStandard Warranty: 1 Year\n\nCovered:\n• Manufacturing defects\n• Motor issues\n\nNot Covered:\n• Crash damage\n• Water damage\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1728
+      ],
+      "id": "6e18a880-f98a-44c2-8da1-723d35dbe3d6",
+      "name": "Warranty Node",
+      "webhookId": "78104b72-3434-4b31-a532-d47cb29c9851"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "📞 GOAG Support Team\n\nCustomer Support: +91 XXXXX XXXXX\nEmail: support@goagdrones.com\n\nOur technician will assist you.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        2160
+      ],
+      "id": "3ef252e9-9828-48b0-a5bf-3dde5b327473",
+      "name": "Contact Node",
+      "webhookId": "78104b72-3434-4b31-a532-d47cb29c9851"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "=🚁 Welcome to GOAG Drone Support\n\nPlease select your language\n1️⃣ English\n2️⃣ తెలుగు",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.2,
+      "position": [
+        -1552,
+        2320
+      ],
+      "id": "437a7b73-342b-4a8f-93af-f14fc58002db",
+      "name": "welcome1",
+      "webhookId": "9b69b23d-ef2b-47f1-be60-013f2a9b65c6"
+    },
+    {
+      "parameters": {
+        "options": {
+          "responseMode": "responseNodes"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -1872,
+        2320
+      ],
+      "id": "3b627ce6-d7b2-4a7e-9b21-04ee4f3a6592",
+      "name": "When chat message received",
+      "webhookId": "33e1e73b-f1f3-4010-9e4e-87b424460333"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "I’m sorry the issue is still not resolved.\n\n1️⃣ Get an AI-generated step-by-step advanced solution from GOAG Bot\n2️⃣ Contact GOAG Support Team",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.3,
+      "position": [
+        992,
+        1744
+      ],
+      "id": "85a50455-980e-4219-866c-8deae1fd91e6",
+      "name": "ASKING FOR SOLVE OR NOT",
+      "webhookId": "1c4a2533-eb95-49c3-b5f9-f65b165f62c9"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "ed9b9df8-c1b4-4e07-b8c5-0adfd5be11fc"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4c249695-9abb-4f5a-9c8e-f08786070740",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        1744
+      ],
+      "id": "dba95429-4966-40ef-9257-1341c33592bd",
+      "name": "Switch4"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "PLEASE PROVIDE VALID INPUT....",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.3,
+      "position": [
+        1280,
+        2048
+      ],
+      "id": "13b4ed32-4b02-4842-a1b1-f3e4cc34dc00",
+      "name": "Chat2",
+      "webhookId": "6f23cb49-913d-43f3-824c-fd495491968b"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Please describe your issue in detail.\n\nExample:\n\"The motor starts but makes a loud noise and the propeller does not rotate properly.\"",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.3,
+      "position": [
+        1376,
+        1344
+      ],
+      "id": "21635ea9-b7d4-4d6f-9a0d-471253ea71d2",
+      "name": "Chat3",
+      "webhookId": "fcd3ce1e-db7d-41f3-bf4d-6cd2c2eb7589"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1744,
+        1424
+      ],
+      "id": "e204b35b-d31c-4da1-8c81-0dd252d689d6",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "9vLkRvK6SzpKOPRu",
+          "name": "Groq account 130"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert Agriculture Drone Support AI for GOAG Drones and Services.\n\nYour task is to analyze the customer's issue and provide a clear, practical, step-by-step troubleshooting guide.\n\nIssue Category: {{$json.issue_category || \"General Drone Issue\"}}\n\nCustomer Problem Description:\n{{$json.chatInput || $json.body?.Body || \"No issue description provided\"}}\n\nInstructions:\n1. Identify the most likely cause of the issue.\n2. Provide a numbered step-by-step solution.\n3. Use simple language that farmers and drone operators can understand.\n4. Mention any safety precautions before troubleshooting.\n5. If the issue cannot be resolved remotely, advise the customer to contact GOAG technical support.\n6. Keep the response concise but helpful (maximum 300 words).\n\nResponse Format:\n\n🔍 Possible Cause:\n[Brief explanation]\n\n🛠️ Step-by-Step Solution:\n1. ...\n2. ...\n3. ...\n\n⚠️ Safety Note:\n[Important precaution]\n\n📞 Need More Help?\nIf the problem still continues, please contact GOAG Drones and Services technical support.\n\nplease reply with anything to proceed....",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        1664,
+        1264
+      ],
+      "id": "710fc131-0b25-4e9c-9c33-09707863d81d",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "={{ $json.text }}\nreply with anything to proceed...",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.3,
+      "position": [
+        2016,
+        1264
+      ],
+      "id": "48a31790-366c-4978-9d3e-40a39a487d71",
+      "name": "Chat4",
+      "webhookId": "3d0c871f-1080-478e-86e8-8f3010efa0cf"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "5af71bcf-4443-422d-ba8b-9eae839169ca"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "73ad8f03-ac42-4818-a332-a54b85c862c9",
+                    "leftValue": "={{$json[\"chatInput\"]}}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        2816,
+        1216
+      ],
+      "id": "819fc6ea-3b97-4149-8daf-cda412b5c3d0",
+      "name": "Switch5"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "message": "Was your issue resolved?\n\n1 Yes\n2 No – Schedule a call with technician\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1.3,
+      "position": [
+        2224,
+        1264
+      ],
+      "id": "62b0c50c-1878-4793-8d4b-1c9a6c1b8d9e",
+      "name": "Chat5",
+      "webhookId": "d4abb439-8e22-49cc-86f0-cd99064870bd"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "language selection": {
+      "main": [
+        [
+          {
+            "node": "English Support Menu",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telugu Support Menu",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Invalid Language Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invalid Language Selection": {
+      "main": [
+        [
+          {
+            "node": "language selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Drone Issues",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "General Queries",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Contact Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Invalid Language Selection1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "English Support Menu": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invalid Language Selection1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drone Issues": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Motor Problem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Battery Issue",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "GPS Issue",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sprayer Problem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Remote Controller",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Invalid Language Selection2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invalid Language Selection2": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Motor Problem": {
+      "main": [
+        [
+          {
+            "node": " issue resolved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Battery Issue": {
+      "main": [
+        [
+          {
+            "node": " issue resolved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPS Issue": {
+      "main": [
+        [
+          {
+            "node": " issue resolved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sprayer Problem": {
+      "main": [
+        [
+          {
+            "node": " issue resolved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remote Controller": {
+      "main": [
+        [
+          {
+            "node": " issue resolved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    " issue resolved": {
+      "main": [
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "ISSUE RESOLVED",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ASKING FOR SOLVE OR NOT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "language selection",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Invalid Language Selection3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invalid Language Selection3": {
+      "main": [
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ISSUE RESOLVED": {
+      "main": [
+        []
+      ]
+    },
+    "NOT RESOLVED CALL": {
+      "main": [
+        [
+          {
+            "node": "name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "name": {
+      "main": [
+        [
+          {
+            "node": "mobile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "mobile": {
+      "main": [
+        [
+          {
+            "node": "city",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "city": {
+      "main": [
+        [
+          {
+            "node": "model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "model": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Chat1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "General Queries": {
+      "main": [
+        [
+          {
+            "node": "Switch3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "node": "Price Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spare Parts Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Training Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Warranty Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Contact Node",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Invalid Language Selection4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invalid Language Selection4": {
+      "main": [
+        [
+          {
+            "node": "Switch3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Price Node": {
+      "main": [
+        [
+          {
+            "node": "Chat7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spare Parts Node": {
+      "main": [
+        [
+          {
+            "node": "Chat7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Training Node": {
+      "main": [
+        [
+          {
+            "node": "Chat7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Warranty Node": {
+      "main": [
+        [
+          {
+            "node": "Chat7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contact Node": {
+      "main": [
+        [
+          {
+            "node": "Chat7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "welcome1": {
+      "main": [
+        [
+          {
+            "node": "language selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "welcome1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ASKING FOR SOLVE OR NOT": {
+      "main": [
+        [
+          {
+            "node": "Switch4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch4": {
+      "main": [
+        [
+          {
+            "node": "Chat3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NOT RESOLVED CALL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Chat2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat2": {
+      "main": [
+        [
+          {
+            "node": "Switch4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat3": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Chat4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat4": {
+      "main": [
+        [
+          {
+            "node": "Chat5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat5": {
+      "main": [
+        [
+          {
+            "node": "Switch5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch5": {
+      "main": [
+        [
+          {
+            "node": "ISSUE RESOLVED",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NOT RESOLVED CALL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "01f6fcdc-5bfe-4e6b-a09e-e584163d008d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "969257b09ad2942bbaff2e2288304f4969030574d109cdeca05bf11f630884df"
+  },
+  "id": "8TAyfbzSY6MNoUlG",
+  "tags": []
+}
